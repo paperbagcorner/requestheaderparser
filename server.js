@@ -18,7 +18,7 @@ app.route('/')
 app.route('/api/whoami')
     .get((req, res) => {
         let result = {};
-        result.ipaddress = req.ip;
+        result.ipaddress = req.ips.join(', '); // Mimic behavior of sample app.
 
         // We take the first language in the 'accept-language' header as the language.
         try {
