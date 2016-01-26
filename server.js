@@ -3,8 +3,12 @@
 const express = require('express');
 const app = express();
 
+// Settings
 app.enable('trust proxy');
 app.set('json spaces', 1);
+
+// Static files
+app.use(express.static(process.cwd() + '/public'));
 
 app.route('/')
     .get((req, res) => {

@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Request header parser</title>
-        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' type="text/css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1>Backend development project: Request header parser</h1>
-                </div>
+
+<head>
+    <title>Request header parser</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Backend development project: Request header parser</h1>
+                <blockquote>
+					<dl>
+						<dt>User story:</dt>
+						<dd>
+							<ol>
+							    <li> I can get the IP address, language and operating system for my browser.</li>
+							</ol>
+						</dd>
+					</dl>
+					<br>
+				</blockquote>
+
+                <h3>Example usage</h3>
+                <p>
+                    <code class="add-href">api/whoami/</code>
+                    <h3>Example output</h3>
+                    <p>
+                        <pre>
+{
+ "ipaddress": "127.0.0.1",
+ "language": "en",
+ "software": "X11; Linux x86_64"
+}
+                    </pre>
+                    </p>
             </div>
         </div>
-    </body>
+    </div>
+    <script src="/assets/completeurls.js"></script>
+</body>
+
 </html>
