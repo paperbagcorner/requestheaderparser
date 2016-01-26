@@ -12,7 +12,7 @@ I can get the IP address, language and operating system for my browser.
 
 ## Example usage
 ```
-https://request-header-parser-paperbagcorner.c9users.io/api/whoami/
+https://requestheaderparser.herokuapp.com/api/whoami/
 ```
 
 ## Example output
