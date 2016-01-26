@@ -21,10 +21,23 @@ app.route('/api/whoami')
         result.ipaddress = req.ip;
 
         // We take the first language in the 'accept-language' header as the language.
-        result.language = req.headers['accept-language'].split(',')[0];
+        try {
+            result.language = req.get('accept-language').split(',')[0];
+        }
+        catch (e) {
+            // We couldn't detect the language. Possibly because the header is not set.
+            console.log(e);
+        }
 
         // We define the software to be the content of the first parenthesis in the user-agent header.
-        result.software = req.headers['user-agent'].match(/\((.*?)\)/)[1];
+        try {
+            result.software = req.get('user-agent').match(/\((.*?)\)/)[1];
+        }
+        catch (e) {
+            // The header wasn't in the format we assumed. Return the whole user-agent header instead.
+            console.log(e);
+            result.software = req.get('user-agent');
+        }
 
         res.json(result);
     });
